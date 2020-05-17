@@ -3,8 +3,9 @@
 ## Especificações
 - Node: v12.16.1
 - Yarn: v1.22
-- Typescript: v3.8.3
 - Express: v4.17.1
+- Typescript: v3.8.3
+- tsrynge: v4.1.0
 - Typeorm: v0.2.24
 - Jest: v25
 - Supertest: v4.0
