@@ -14,13 +14,21 @@
 **Instalação**
 1. Dependências do projeto:
   Com o terminal aberto na pasta api do projeto rode o comando:
-  - yarn install
-
+  ```
+  yarn install
+  ```
 2. Para o ambiente mysql foi utilizado o Docker.
   Caso deseje utilizar o docker basta rodar o comando abaixo e o ambiente será criado.
-  - docker run -d -p 3306:3306 --name testeTiagoVaz -e "MYSQL_DATABASE=novaescola" -e "MYSQL_ROOT_PASSWORD=novaescola" mysql:5.7
+  ```
+  docker run -d -p 3306:3306 --name projetoNovaEscola -e "MYSQL_DATABASE=novaescola" -e "MYSQL_ROOT_PASSWORD=novaescola" mysql:5.7
+  ```
   Nome Container:
-  - testeTiagoVaz
+  - projetoNovaEscola
+  
+  Para iniciar o container rode o comando:
+  ```
+  docker start projetoNovaEscola
+  ```
   Caso opte por não utilizar o docker, basta seguir as instruções no final do arquivo.
 
 3. Criar e popular Tabela
@@ -33,7 +41,9 @@
   Caso opte por não utilizar o docker, basta informar as configurações de seu ambiente dentro do arquivo ormconfig.json na raiz do projeto e criar o database novaescola (novaescola_testes será criado pela migration)
 
 **Rodando o projeto**
-- yarn dev:server
+```
+yarn dev:server
+```
 
 O servidor será iniciado na porta 3333
 
@@ -41,7 +51,9 @@ O servidor será iniciado na porta 3333
 Arquivo de rotas está disponível na raiz do projeto e pode ser importado no postman.
 
 **Rodando os Testes**
-- yarn test
+```
+yarn test
+```
 
 Foi criado um repositório fake para o módulo de clientes que não interage com o banco de dados.
 Isso testa as funcionalidades de um serviço de forma isolada, sem nenhuma interferencia externa linha por linha de código.
@@ -50,10 +62,11 @@ Ele testa a resposta das rotas. Todo tratamento de erros é feita nos testes uni
 
 
 #### Definições para criação da base de dados:
-
-  Banco de dados Principal:
+**Banco de dados Principal:**
   - database: novaescola
   - host: localhost
   - porta: 3306
   - username: root
   - password: novaescola
+  
+O banco de dados de teste é criado automaticamente.
