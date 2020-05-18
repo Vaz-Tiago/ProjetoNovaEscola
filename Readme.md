@@ -33,8 +33,10 @@
   Caso opte por não utilizar o docker, basta seguir as instruções no final do arquivo.
 
 3. Criar e popular Tabela
-  Foi utilizada uma abordagem code-first, portanto não há arquivos sql. Basta rodar as migrations dentro do projeto:
-  - yarn typeorm migration:run
+  Foi utilizada uma abordagem code-first, portanto não há arquivos sql. Basta rodar as migrations dentro do projeto com o seguinte comando:
+  ```
+  yarn typeorm migration:run
+  ```
   Esse comando irá:
   1. Criar e popular a tabela clients no banco de dados novaescola.
   2. Criar o banco de dados novaescola_testes e a tabela clients.
